@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.dashboard {
+    background-color: rgb(24, 124, 255);
+    grid-column: 1 / 2;
+}
+
+ul {
+    list-style: none;
+}
+
+.projects {
+    display: grid;
+    background-color: #bccbde;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: rgb(38, 138, 138);
+}
