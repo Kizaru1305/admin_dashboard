@@ -1,7 +1,10 @@
 :root {
     --box-color: white;
     --button-size: 20px;
+    --space-size: 30px;
+    --boxes-shadow: 5px 10px 18px #888888;
 }
+
 
 * {
     padding: 0;
@@ -10,18 +13,30 @@
 
 .container {
     display: grid;
-    grid-template-columns: 0.6fr 5fr;
-    border: 1px solid red;
-    height: 100vh; 
-    width: 100vw; 
+    grid-template-columns: 1fr 5fr;
+    width: 100vw;
+    height: 100vh;
 }
 
+.profile-pic {
+    height: 60px;
+    width: 60px;
+}
+
+/* dashboard */
+
 .dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: rgb(24, 124, 255);
+    display: grid;
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 25px;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     font-size: 20px;
@@ -29,10 +44,11 @@
     font-weight: 500;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+.menu {
+    margin: 0;
 }
+
+
 
 .dashboard .logo img {
     width: 30px;
@@ -40,45 +56,143 @@
     vertical-align: middle; */
 }
 
+ul {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 45px;
 
+}
 
+.menu ul li {
+}
+
+/* ----------- */
+
+/* header */
 
 .header {
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: var(--boxes-shadow);
+    z-index: 1;
 }
 
-ul {
-    list-style: none;
+.header input[type=text] {
+    border-radius: 25px;
+    border: none transparent;
+    background-color: rgb(226, 226, 226);
+    width: 300px;
 }
+
+.search-container {
+    justify-self: center;
+}
+
+.share-btns {
+    grid-column: -2 / -1;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.share-btns button {
+    background-color: rgb(49, 143, 250);
+    color: white;
+    height: 35px;
+    padding: 10px;
+    width: 80px;
+    border-radius: 15px;
+
+    border: none;
+}
+
+.notifications {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 150px 150px;
+}
+
+.account {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 150px 150px;
+}
+
+.account p{
+    align-self: center;
+}
+
+.account img {
+    justify-self: flex-end;
+    align-self: center;
+}
+
+/* ------end of header------ */
+
+
 
 .projects {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    background-color: #bccbde;
-    
+    background-color: #eeeeee;
+    padding: var(--space-size);
+    gap: 20px;
 }
+
+.projects .heading{
+    font-size: large;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-bottom: var(--space-size);
+}
+
+#align {
+    margin-left: 70px;
+}
+
+
 
 .card-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
     grid-column: 1 / 2;
 }
 
 .card {
-    background-color: rgb(227, 238, 238);
-    border-left: 5px solid rgb(255, 187, 39);
-    margin: 10px;
-    border-radius: 15px;
-    height: 125px;
-    padding: 10px;
-}
-
-.projects-side {
-}
-
-.announcement-box, .trending-box {
     background-color: var(--box-color);
+    border-left: 5px solid rgb(255, 187, 39);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.project-side {
+    grid-column: 2 / 3;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement-box,
+.trending-box {
+    width: max(300px);
+    background-color: var(--box-color);
+    box-shadow: var(--boxes-shadow);
+    
+    border-radius: 15px;
+    padding: var(--space-size);
+    
+}
+
+.trending-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
@@ -88,4 +202,14 @@ ul {
     border: none;
     margin: 0;
     background-color: red;
+}
+
+
+.description {
+    color:gray;
+}
+
+.title {
+    color: black;
+    font-weight: bold;
 }

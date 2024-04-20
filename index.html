@@ -12,14 +12,32 @@
     <div class="container">
 
         <div class="header">
-            <button>Button</button>
-            <input type="text" placeholder="Search..">
+            <div class="search-container">
+                <button class="search-btn"><img src="img/magnify.svg"></button>
+                <input type="text">
+            </div>
 
-            <button class="search-btn"><img src="img/magnify.svg"></button>
-            <p>Hello Softo Wetto</p>
-            <button>New</button>
-            <button>Upload</button>
-            <button>Share</button>
+            <div class="notifications">
+                <img class="profile-pic" src="img/6330-stare.png">
+                <p>Hi there,
+                    <br> Softo Wetto (@Softo)
+                </p>
+            </div>
+
+            <div class="account">
+                <img class="profile-pic" src="img/6330-stare.png">
+                <p>Hi there,
+                    <br> Softo Wetto (@Softo)
+                </p>
+
+            </div>
+
+            <div class="share-btns">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+
         </div>
 
         <div class="dashboard">
@@ -35,28 +53,33 @@
                     <li><img src="img/mdi--history.svg">History</li>
                     <li><img src="img/mdi--calendar-task.svg">Tasks</li>
                     <li><img src="img/mdi--people-group.svg">Communities</li>
-                    <div class="settings-menu">
-                        <ul>
-                            <li><img src="img/mdi--settings.svg">Settings</li>
-                            <li><img src="img/mdi--question-mark-box.svg">Support</li>
-                            <li><img src="img/mdi--shield-check.svg">Privacy</li>
-                        </ul>
-                    </div>
                 </ul>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><img src="img/mdi--settings.svg">Settings</li>
+                    <li><img src="img/mdi--question-mark-box.svg">Support</li>
+                    <li><img src="img/mdi--shield-check.svg">Privacy</li>
+                </ul>
+
             </div>
         </div>
 
         <div class="projects">
-            <p>Your Projects</p>
+            <p class="heading">Your Projects</p>
+            <p class="heading" id="align">Announcements</p>
             <div class="card-wrapper">
                 <div class="card">
                     <p>Project Title</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+                    <img src="img/mdi--calendar-task.svg">
+                    <img src="img/mdi--home.svg">
+                    <img src="img/mdi--home.svg">
                 </div>
                 <div class="card">
-                    <p>Project Title</p>
+                    <p class="title">Project Title</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
@@ -84,30 +107,56 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
-                </div>
-            </div>
-            <div class="project-side">
-                <p>Announcements</p>
-                <div class="announcement-box">
-                    <p>placeholder</p>
-                    <p>placeholder</p>
-                    <p>placeholder</p>
-                    <p>placeholder</p>
                 </div>
 
-                <p>Trending</p>
+            </div>
+
+            <div class="project-side">
+                <div class="announcement-box">
+                    <p class="title">Site Maintenance</p>
+                    <p class="description">placeholder placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder placeholder
+                        placeholder placeholder
+                    </p>
+                    <hr>
+                    <p class="title">Community Share Day</p>
+                    <p class="description">placeholder placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder placeholder
+                        placeholder placeholder
+                    </p>
+                    <hr>
+                    <p class="title">Updated Privacy</p>
+                    <p class="description">placeholder placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder placeholder
+                        placeholder placeholder
+                    </p>
+                    <hr>
+                </div>
+
+                <p class="heading">Trending</p>
                 <div class="trending-box">
-                    <p>placeholder</p>
-                    <p>placeholder</p>
-                    <p>placeholder</p>
-                    <p>placeholder</p>
+                    <img class="profile-pic" src="img/6330-stare.png">
+                    <p>Hi there,
+                        <br> Softo Wetto (@Softo)
+                    </p>
+                    <img class="profile-pic" src="img/6330-stare.png">
+                    <p>Hi there,
+                        <br> Softo Wetto (@Softo)
+                    </p>
+                    <img class="profile-pic" src="img/6330-stare.png">
+                    <p>Hi there,
+                        <br> Softo Wetto (@Softo)
+                    </p>
+                    <img class="profile-pic" src="img/6330-stare.png">
+                    <p>Hi there,
+                        <br> Softo Wetto (@Softo)
+                    </p>
                 </div>
             </div>
 
         </div>
 
     </div>
-    <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </body>
 
 </html>
