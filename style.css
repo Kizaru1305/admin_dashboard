@@ -13,7 +13,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 6fr;
     width: 100vw;
     height: 100vh;
 }
@@ -65,8 +65,7 @@ ul {
 
 }
 
-.menu ul li {
-}
+
 
 /* ----------- */
 
@@ -84,11 +83,23 @@ ul {
     border-radius: 25px;
     border: none transparent;
     background-color: rgb(226, 226, 226);
-    width: 300px;
+    width: 400px;
+    height: 30px;
 }
 
 .search-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     justify-self: center;
+}
+
+.search-container input {
+    align-self: center;
+}
+
+.search-container button {
+    align-self:center;
+    justify-self: end;
 }
 
 .share-btns {
@@ -120,7 +131,7 @@ ul {
 .account {
     display: grid;
     justify-self: center;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 150px 200px;
 }
 
 .account p{
@@ -132,13 +143,36 @@ ul {
     align-self: center;
 }
 
+.title span {
+    font-size: 20px;
+}
+
+.account2 {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.account2 img {
+    justify-self: center;
+}
+
+.account2 .title {
+    justify-self: start;
+}
+
+.account2 button {
+    justify-self: end;
+}
+
 /* ------end of header------ */
 
 
 
 .projects {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 0.5fr;
     background-color: #eeeeee;
     padding: var(--space-size);
     gap: 20px;
@@ -152,7 +186,7 @@ ul {
 }
 
 #align {
-    margin-left: 70px;
+    justify-self: start;
 }
 
 
@@ -165,6 +199,10 @@ ul {
 }
 
 .card {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    justify-content: center;
+    align-items: center;
     background-color: var(--box-color);
     border-left: 5px solid rgb(255, 187, 39);
     border-radius: 15px;
@@ -172,10 +210,20 @@ ul {
     box-shadow: 5px 10px 18px #888888;
 }
 
+.card div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    height: 20px;
+    justify-self: end;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
 .project-side {
     grid-column: 2 / 3;
     display: grid;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
@@ -201,7 +249,7 @@ ul {
     width: var(--button-size);
     border: none;
     margin: 0;
-    background-color: red;
+    background-color: transparent;
 }
 
 
@@ -212,4 +260,10 @@ ul {
 .title {
     color: black;
     font-weight: bold;
+}
+
+
+
+hr {
+    margin: 1em 0;
 }
